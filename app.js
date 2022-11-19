@@ -30,8 +30,8 @@ app.get("/create-user", (req, res) =>
 {
     const user = new User(
         {
-            name: "Alberto",
-            email: "kalberto@gmail.com",
+            name: "Adriel",
+            email: "kalberto2@gmail.com",
             password: "spenguin",
             is_broker: true
         }

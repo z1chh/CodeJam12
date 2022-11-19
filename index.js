@@ -19,6 +19,10 @@ mongoose.connect(dbUri) //, {useNewUrlParse: true, useUnifiedTopology: true})
 app.engine('handlebars', exphbs.engine()); // app.engine('handlebars', exphbs({defaultLayout: 'main'});
 app.set('view engine', 'handlebars');
 
+// Body parser middleware
+app.use(express.json());
+app.use(express.urlencoded({extended: true}));
+
 // Set default port
 const PORT = process.env.PORT || 5000;
 
@@ -97,4 +101,10 @@ app.get("/single-user", (req, res) =>
     })
     .catch((err) =>
     console.log(err));
+});
+
+app.post("/jobs", (req, res) =>
+{
+    console.log(req.body);
+    const job = new Job(req.body);
 });

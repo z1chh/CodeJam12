@@ -1,66 +1,43 @@
-const express = require("express");
-const mongoose = require("mongoose");
+// Basic Express Program
+
+const express = require('express');
 const path = require('path');
-const morgan = require('morgan');
-const User = require("./server/model/User");
-const Job = require("./server/model/Job");
+const exphbs = require('express-handlebars');
+const logger = require('./middleware/logger');
+const users = require('./Tables/Users');
+const jobs = require('./Tables/Jobs');
 
 // Initialize express
 const app = express();
 
-// Connect to MongoDB
-const dbUri = "mongodb+srv://admin:penguin@penguins.uqphgd2.mongodb.net/Penguins?retryWrites=true&w=majority";
-mongoose.connect(dbUri) //, {useNewUrlParse: true, useUnifiedTopology: true})
-.then((res) => app.listen(PORT, () => console.log(`Server started on ${PORT}.`)))
-.catch((err) => console.log(err));
+// Initialize middleware
+// app.use(logger); // Comment out, we don't actually need this anymore
 
+// Handlebars middleware
+app.engine('handlebars', exphbs.engine()); // app.engine('handlebars', exphbs({defaultLayout: 'main'});
+app.set('view engine', 'handlebars');
 
-// Register view engine
-app.set("view engine", "ejs");
+// Body parser middleware
+app.use(express.json());
+app.use(express.urlencoded({extended: false}));
 
-// Set default port
-const PORT = process.env.PORT || 5000;
+// Homepage Route
+app.get('/', (req, res) => res.render('index',
+{
+    title: "User App",
+    users: users,
+    jobs: jobs
+}));
 
 // Set a static folder
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(morgan('dev'));
+
+// Set default port
+const PORT = process.env.PORT || 5000 ;
+
+// Listen on a port
+app.listen(PORT, () => console.log(`Server started on ${PORT}.`));
 
 // API Routes
-// app.use('/api/users', require('./routes/api/users.js'))
-// app.use('/api/jobs', require('./routes/api/jobs.js'))
-
-// mongoose and mongo sandbox routes
-app.get("/create-user", (req, res) =>
-{
-    const user = new User(
-        {
-            name: "Adriel",
-            email: "kalberto2@gmail.com",
-            password: "spenguin",
-            is_broker: true
-        }
-    );
-
-    user.save()
-    .then((result) =>
-    {
-        res.send(result);
-    })
-    .catch((err) =>
-    {
-        console.log(err);
-    });
-});
-
-app.get("/all-users", (req, res) =>
-{
-    User.find()
-    .then((result) =>
-    {
-        res.send(result);
-    })
-    .catch((err) =>
-    {
-        console.log(err);
-    });
-})
+app.use('/api/users', require('./routes/api/users.js'))
+app.use('/api/jobs', require('./routes/api/jobs.js'))

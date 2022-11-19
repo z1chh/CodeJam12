@@ -28,6 +28,28 @@ app.use(morgan('dev'));
 // API Routes
 // app.use('/api/users', require('./routes/api/users.js'))
 // app.use('/api/jobs', require('./routes/api/jobs.js'))
+app.get("/", (req, res) =>
+{
+    res.redirect("/jobs");
+});
+
+app.get("/jobs", (req, res) =>
+{
+    // TODO
+    Job.find()
+    .then((result) =>
+    {
+        res.render("index",
+        {
+            title: "All Jobs",
+            jobs: result
+        });
+    })
+    .catch((err) =>
+    {
+        console.log(err);
+    });
+});
 
 // mongoose and mongo sandbox routes
 app.get("/create-user", (req, res) =>
@@ -63,4 +85,15 @@ app.get("/all-users", (req, res) =>
     {
         console.log(err);
     });
-})
+});
+
+app.get("/single-user", (req, res) =>
+{
+    User.findById("63792e648c41325d07f6d1ed")
+    .then((result) =>
+    {
+        res.send(result);
+    })
+    .catch((err) =>
+    console.log(err));
+});

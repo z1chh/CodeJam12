@@ -10,7 +10,7 @@
 
 
 
-### FRONT-END
+## FRONT-END
 - Signup/Login 
 - Broker or Trucker depending on login info
 
@@ -25,7 +25,7 @@ TRUCKER
 - Location -> Google maps live location -> update each time
 
 
-### BACK-END
+## BACK-END
 - TABLES 	- USERS 	(name, email, passward, type (bool))
 		- TRUCKERS	(cargo max weight)
 		- BROKERS	()

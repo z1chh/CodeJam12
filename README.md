@@ -29,6 +29,3 @@ BACK-END
 		- BROKERS	()
 		- JOBS	(JOBS ID, Truckers ID, Brokers ID, Posted Date, Expected Date, Start Location, End Location, Rates, Cargo)
 
-
-+===============+
-|    USER   

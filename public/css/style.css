@@ -1,14 +1,39 @@
 /*********************\
 *     Properties      *
 \*********************/
+:root
+{
+     /* Colors */
+    --white-color: rgb(222, 222, 222);
+    --grey-color: rgb(50, 50, 50);
+    --light-grey-color: rgb(110, 110, 110);
+    --blue-color: rgb(0, 0, 100);
+    --light-blue-color: rgb(0, 135, 150);
+    --orange-color: rgb(200, 150, 0);
+
+    /* Fonts */
+	--roberto: 'Roberto Condensed', sans-serif;
+    
+}
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-.login_container{
-    width:420px;
-    position:absolute;
-    top:40%;
-    left:45%;
+body{
+    font-family: 'Merriweather', sans-serif;
+    background: url(~\public\images\truck.jpg);
 }
+.login_container{
+    width:300px;
+    height: 250px;
+    padding:30px;
+    position:fixed;
+    top:30%;
+    left:40%;
+    border-radius: 20px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5)
+}
+
+

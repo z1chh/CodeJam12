@@ -21,9 +21,9 @@ const jobSchema = new Schema(
     required: true,
     unique: false
   },
-  is_broker:
+  rate:
   {
-    type: Boolean,
+    type: Number,
     required: true,
     unique: false
   },

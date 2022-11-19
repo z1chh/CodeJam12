@@ -6,25 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./css/style.css">
     <link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet'>
-    <title>LoadATruck</title>
+    <title>Load-In-Road</title>
 </head>
 <body>
     <div class="login_container">
         <form class="login" action ="index.html" id="login">
             <h1 class="login_title">Welcome</h1>
-            <input type="username" class="login_input_username" placeholder="Username" id="loginUser">
+            <input type="username" class="login_input_username" placeholder="Username/Email" id="loginUser">
             <input type="password" class="login_input_password" placeholder="Password" id="loginPass"> 
             <div class="login_err_msg">Wrong username and/or password</div>
             <button type="submit" class="login_submit" id="submitButton">Log In</button>
             <a class="login_no_acct" href="./" id="createAcct">Don't have an account? Create one here</a>  
         </form>  
         <form class="create login_hidden" action ="index.html" id="create">
-            <h1 class="login_title">Create Account</h1>
+            <h1 class="login_title">Sign Up</h1>
             <input type="username" class="login_input_username" placeholder="Enter Username" id="signupUser" name="name">
-            <input type="email" class="login_input_email" placeholder="Enter Email" name="email">
+            <input type="email" class="login_input_email" placeholder="Enter Email" name="email" id="signupEmail">
             <input type="password" class="login_input_password" placeholder="Enter Password" name="password1"> 
             <input type="password" class="login_input_password" placeholder="Confirm Password" id="signupPass" name="password2"> 
-            <div class="login_err_msg">Wrong username and/or password</div>
+            <!-- ADD HERE -->
             <button type="submit" class="login_submit" id="submitButton">Sign Up</button>  
             <a class="login_no_acct" href="./" id="loginAcct">Already have an account? Sign in here</a>
         </form>       

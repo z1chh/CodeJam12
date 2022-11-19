@@ -3,22 +3,34 @@ const {Schema} = mongoose;
 
 const jobSchema = new Schema(
 {
+    shipper:
+    {
+        type: mongoose.Schema.Types.ObjectId, ref: 'Shipper',
+        required: true,
+        unique: false
+    },
+    carrier:
+    {
+        type: mongoose.Schema.Types.ObjectId, ref: 'Carrier',
+        required: false,
+        unique: false
+    },
     start_location:
     {
         type: String,
-        required: false,
+        required: true,
         unique: false
     },
     end_location:
     {
     type: String,
-    required: false,
+    required: true,
     unique: false
     },
     posted_date:
     {
     type: Date,
-    required: false,
+    required: true,
     unique: false
     },
     expected_delivery_date:
@@ -28,6 +40,12 @@ const jobSchema = new Schema(
     unique: false
     },
     rate:
+    {
+    type: Number,
+    required: true,
+    unique: false
+    },
+    load_weight:
     {
     type: Number,
     required: true,

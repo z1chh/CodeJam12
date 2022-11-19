@@ -9,7 +9,7 @@ document.querySelector("#submitButton").addEventListener("click", e => {
     // else{
     //     alert("login fail");
     // }
-    window.location.href = "carrier.html";
+    window.location.href = "shipper.html";
 });
 
 document.addEventListener("DOMContentLoaded", () => {

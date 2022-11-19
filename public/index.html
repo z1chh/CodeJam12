@@ -7,6 +7,11 @@
     <link rel="stylesheet" type="text/css" href="./css/style.css">
     <link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet'>
     <title>Load-In-Road</title>
+    <style>
+        label{
+            color:white
+        }
+    </style>
 </head>
 <body>
     <div class="login_container">
@@ -24,7 +29,12 @@
             <input type="email" class="login_input_email" placeholder="Enter Email" name="email" id="signupEmail">
             <input type="password" class="login_input_password" placeholder="Enter Password" name="password1"> 
             <input type="password" class="login_input_password" placeholder="Confirm Password" id="signupPass" name="password2"> 
-            <!-- ADD HERE -->
+            <!-- <p style="margin:10px; color:white">Sign Up as:</p> -->
+            <div style="padding:20px">
+            <input style="color:white" type="radio" name="rdbRole" id="rdbRole" value="C">
+            <label for="rdbRole">Carrier</label>
+            <input style="color:white" type="radio" name="rdbRole" id="rdbRole" Value="B">
+            <label for="rdbRole">Broker</label>
             <button type="submit" class="login_submit" id="submitButton">Sign Up</button>  
             <a class="login_no_acct" href="./" id="loginAcct">Already have an account? Sign in here</a>
         </form>       

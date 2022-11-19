@@ -10,7 +10,7 @@ const users = require('./Users');
 const app = express();
 
 // Initialize middleware
-app.use(logger);
+// app.use(logger); // Comment out, we don't actually need this anymore
 
 // Handlebars middleware
 app.engine('handlebars', exphbs.engine()); // app.engine('handlebars', exphbs({defaultLayout: 'main'});

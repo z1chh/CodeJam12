@@ -1,4 +1,4 @@
-# CodeJam12
+# CodeJam12 Team Penguins
 
 ## Sketch
 - Premium : Users willing to share location (truckers) & rate (brokers)

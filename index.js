@@ -2,6 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const path = require('path');
 const morgan = require('morgan');
+const exphbs = require('express-handlebars');
 const User = require("./server/model/User");
 const Job = require("./server/model/Job");
 
@@ -14,9 +15,9 @@ mongoose.connect(dbUri) //, {useNewUrlParse: true, useUnifiedTopology: true})
 .then((res) => app.listen(PORT, () => console.log(`Server started on ${PORT}.`)))
 .catch((err) => console.log(err));
 
-
-// Register view engine
-app.set("view engine", "ejs");
+// Handlebars middleware
+app.engine('handlebars', exphbs.engine()); // app.engine('handlebars', exphbs({defaultLayout: 'main'});
+app.set('view engine', 'handlebars');
 
 // Set default port
 const PORT = process.env.PORT || 5000;

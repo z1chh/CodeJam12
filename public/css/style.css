@@ -3,14 +3,106 @@
 \*********************/
 :root
 {
-    --blue-color: rgb(0, 0, 100)
-}
-h1
-{
-    font-size: 20em;
+     /* Colors */
+    --white-color: rgb(222, 222, 222);
+    --grey-color: rgb(50, 50, 50);
+    --light-grey-color: rgb(110, 110, 110);
+    --blue-color: rgb(0, 0, 100);
+    --light-blue-color: rgb(0, 135, 150);
+    --orange-color: rgb(200, 150, 0);
+
+    /* Fonts */
+	--roberto: 'Roberto Condensed', sans-serif;
 }
 
-a:hover
+
+/********************\
+*        Tags        *
+\********************/
+body
 {
-    color: var(--blue-color)
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: var(--light-blue-color);
+    font-family: var(--roberto);
+}
+
+.subtitle {
+    color: var(--white-color);
+    font-family: var(--lato);
+    font-size: 2em;
+    text-align: center;
+    margin-top: 0.25em;
+    margin-bottom: 0;
+    padding-bottom: 0.8em;
+}
+
+
+/********************\
+*   Navigation Bar   *
+\********************/
+#navbar
+{
+    padding: 1.2em;
+    background: var(--grey-color);
+}
+
+.navbar-list
+{
+    color: var(--white-color);
+    font-family: var(--roberto);
+    text-align: center;
+}
+
+.navbar-item
+{
+    color: var(--white-color);
+    display: block;
+    list-style: none;
+}
+
+.navbar-link
+{
+    color: var(--white-color);
+    text-decoration: none;
+    margin-right: 1.8em;
+    transition: color 300ms;
+}
+
+.navbar-link:hover
+{
+    color: var(--orange-color);
+}
+
+
+/********************\
+*        Main        *
+\********************/
+#main-title
+{
+    color: var(--white-color);
+    font-family: var(--lato);
+    font-size: 5em;
+    text-align: center;
+    margin-top: 0;
+    padding-top: 0.5em;
+    margin-bottom: 0.25em;
+}
+
+
+/********************\
+*       Footer       *
+\********************/
+#main-footer
+{
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    padding: 2em 0;
+    background: var(--grey-color);
+    color: var(--white-color);
+    font-size: 1.2em;
+    font-family: var(--roberto);
 }

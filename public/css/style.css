@@ -22,7 +22,8 @@
 }
 body{
     font-family: 'Merriweather', sans-serif;
-    background: url(~\public\images\truck.jpg);
+    background: url(~/images/truck.jpg);
+    background-size: cover;
 }
 .login_container{
     width:300px;
@@ -33,7 +34,8 @@ body{
     left:40%;
     border-radius: 20px;
     text-align: center;
-    background: rgba(0, 0, 0, 0.5)
+    background: rgba(0, 0, 0, 0.5);
+    
 }
 
 

@@ -10,16 +10,26 @@
 </head>
 <body>
     <div class="login_container">
-        <form class="login" action ="index.html" method="get" id="login"></form>
+        <form class="login" action ="index.html" method="get" id="login">
             <h1 class="login_title">Welcome</h1>
-            <div class="login_input">
-                <input type="username" class="login_input_username" placeholder="Username">
-            </div>
-            <div class="login_input">
-                <input type="password" class="login_input_password" placeholder="Password">
-            </div>
-            <button type="submit" class="login_submit">Login</button>
+            <input type="username" class="login_input_username" placeholder="Username">
+            <input type="password" class="login_input_password" placeholder="Password"> 
             <div class="login_err_msg">Wrong username and/or password</div>
+            <button type="submit" class="login_submit">Login</button>
+            <div class="login_no_acct"><a id="login_acct">Don't have an account? Create one here</a></div>   
+        </form>  
     </div>
+    <div class="login_container_signup login_hidden">
+        <form class="login" action ="index.html" method="get" id="signup">
+            <h1 class="login_title">Create Account</h1>
+            <input type="username" class="login_input_username" placeholder="Enter Username">
+            <input type="password" class="login_input_password" placeholder="Enter Password"> 
+            <input type="password" class="login_input_password" placeholder="Confirm Password"> 
+            <div class="login_err_msg">Wrong username and/or password</div>
+            <button type="submit" class="login_submit">Login</button>  
+            <div class="login_no_acct"><a id="create_acct">Already have an account? Sign in here</a></div>   
+        </form>       
+    </div>
+    <script src="script.js"></script>
 </body>  
 </html>

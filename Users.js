@@ -1,23 +1,23 @@
-// Create members
-const members = [
+// Create users
+const users = [
     {
         id: 1,
         name: 'Jarad Higgins',
         email: 'jah@gmail.com',
-        status: 'inactive'
+        is_broker: False
     },
     {
         id: 2,
         name: 'Charlton Howard',
         email: 'laroi@gmail.com',
-        status: 'active'
+        is_broker: False
     },
     {
         id: 3,
         name: 'Taurus Bartlett',
         email: 'polog@example.com',
-        status: 'active'
+        is_broker: True
     }
 ];
 
-module.exports = members;
+module.exports = users;

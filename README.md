@@ -38,6 +38,7 @@ TRUCKER
 - express-handlebars
 - path
 - nodemon (-D)
+- mongoDB
 
 ## Notes
 Jobs is incomplete, make sure paths are correct, postman requests must be valid and correct

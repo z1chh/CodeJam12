@@ -2,7 +2,7 @@
   "name": "codejam12_team_penguins",
   "version": "1.0.0",
   "description": "- Premium : Users willing to share location (truckers) & rate (brokers)",
-  "main": "index.js",
+  "main": "src/Load-In Road/src/index.js",
   "scripts": {
     "start": "node index",
     "dev": "nodemon index",

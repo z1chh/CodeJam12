@@ -37,7 +37,7 @@ app.get("/", (req, res) =>
 app.get("/jobs", (req, res) =>
 {
     // TODO
-    Job.find()
+    Job.find().sort({createdAt: 1})
     .then((result) =>
     {
         res.render("index",

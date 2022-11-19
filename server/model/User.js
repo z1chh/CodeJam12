@@ -3,17 +3,17 @@ const {Schema} = mongoose;
 
 const userSchema = new Schema(
 {
-  email:
-  {
-    type: String,
-    required: true,
-    unique: true
-  },
   name:
   {
     type: String,
     required: true,
     unique: false
+  },
+  email:
+  {
+    type: String,
+    required: true,
+    unique: true
   },
   password:
   {
@@ -21,18 +21,12 @@ const userSchema = new Schema(
     required: true,
     unique: false
   },
-  location:
+  is_broker:
   {
-    type: String,
+    type: Boolean,
     required: true,
     unique: false
   },
-  interest:
-  {
-    type: [String],
-    required: true,
-    unique: false
-  }
 })
 const User = mongoose.model('User', userSchema);
 

@@ -13,6 +13,7 @@
 
     /* Fonts */
 	--roberto: 'Roberto Condensed', sans-serif;
+    --merriweather: 'Merriweather', sans-serif
     
 }
 *{
@@ -21,8 +22,9 @@
     box-sizing: border-box;
 }
 body{
-    font-family: 'Merriweather', sans-serif;
-    background-image: url('truck.jpg');
+    font-family: var(--merriweather);
+    background-image: url(../images/truck.jpg);
+    background-size: cover;
 }
 .login_container{
     width:300px;

@@ -23,7 +23,7 @@
 }
 body{
     font-family: var(--merriweather);
-    background-image: url(./images/truck.jpg);
+    background-image: url(../images/truck.jpg);
     background-size: cover;
 }
 .login_container{

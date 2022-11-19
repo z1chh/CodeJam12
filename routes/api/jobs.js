@@ -1,7 +1,7 @@
 const express = require('express');
 const uuid = require('uuid');
 const router = express.Router();
-const jobs = require('../../Jobs');
+const jobs = require('../../Tables/Jobs');
 
 // Get all jobs
 router.get('/', (req, res) => res.json(jobs));
@@ -60,10 +60,10 @@ router.put('/:id', (req, res) =>
         {
             if (job.id === parseInt(req.params.id))
             {
-                job.name = toUpdate.name ? toUpdate.name: job.name;
-                job.email = toUpdate.email ? toUpdate.email: job.email;
+                job.trucker = toUpdate.trucker ? toUpdate.trucker: job.trucker;
+                job.rate = toUpdate.rate ? toUpdate.rate: job.rate;
 
-                res.json({msg: `Job ${job.name} updated`, job: job});
+                res.json({msg: `Job from ${job.broker} updated`, job: job});
             }
         });
     }
@@ -86,7 +86,7 @@ router.delete('/:id', (req, res) =>
             {
                 const toDelete = job[i];
                 job.splice(i, 1);
-                res.json({msg: `Member ${toDelete.name} deleted`, job: job});
+                res.json({msg: `Job from ${toDelete.broker} deleted`, jobs: jobs});
             }
         }
     }

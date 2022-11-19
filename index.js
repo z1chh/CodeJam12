@@ -4,7 +4,8 @@ const express = require('express');
 const path = require('path');
 const exphbs = require('express-handlebars');
 const logger = require('./middleware/logger');
-const users = require('./Users');
+const users = require('./Tables/Users');
+const jobs = require('./Tables/Jobs');
 
 // Initialize express
 const app = express();
@@ -24,7 +25,8 @@ app.use(express.urlencoded({extended: false}));
 app.get('/', (req, res) => res.render('index',
 {
     title: "User App",
-    users: users
+    users: users,
+    jobs: jobs
 }));
 
 // Set a static folder
@@ -36,5 +38,6 @@ const PORT = process.env.PORT || 5000 ;
 // Listen on a port
 app.listen(PORT, () => console.log(`Server started on ${PORT}.`));
 
-// Users API Routes
+// API Routes
 app.use('/api/users', require('./routes/api/users.js'))
+app.use('/api/jobs', require('./routes/api/jobs.js'))

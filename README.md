@@ -41,6 +41,7 @@ TRUCKER
 - nodemon (-D)
 - mongoDB
 - morgan
+- ejs
 
 ## Notes
 Jobs is incomplete, make sure paths are correct, postman requests must be valid and correct

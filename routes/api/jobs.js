@@ -34,7 +34,11 @@ router.post('/', (req, res) =>
 
     if (!newJob.broker)
     {
-        return res.status(400).json({msg: `Error: must include broker`});
+    return res.status(400).json({msg: `Error: must include broker`});
+    }
+    else if (!newJob.rate)
+    {
+        return res.status(400).json({msg: `Error: must input pay rate`});
     }
     else if (newJob.rate < 1)
     {

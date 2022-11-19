@@ -33,3 +33,13 @@ TRUCKER
 
 ## npm Installs
 - moment
+- express
+- uuid
+- express-handlebars
+- path
+- nodemon (-D)
+
+## Notes
+Jobs is incomplete, make sure paths are correct, postman requests must be valid and correct
+
+No actual DBMS implementation, using arrays (meaning restarting code => reset - data lost)

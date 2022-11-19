@@ -1,16 +1,14 @@
 /*********************\
 *     Properties      *
 \*********************/
-:root
-{
-    --blue-color: rgb(0, 0, 100)
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-h1
-{
-    font-size: 20em;
-}
-
-a:hover
-{
-    color: var(--blue-color)
+.login_container{
+    width:420px;
+    position:absolute;
+    top:40%;
+    left:45%;
 }

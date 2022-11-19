@@ -26,11 +26,9 @@ router.post("/createUser", async (req, res) => {
   try {
     const { user } = req.body;
     const newUser = await User.create({
-      email: user.email,
-      username: user.username,
-      password: user.password,
-      location: user.location,
-      interest: user.interest,
+        name: user.name,
+        email: user.email,
+        password: user.password,
     });
     res.status(200).json({ success: !!newUser, user: newUser });
   } catch (e) {

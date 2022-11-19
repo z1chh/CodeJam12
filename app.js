@@ -25,6 +25,10 @@ const PORT = process.env.PORT || 5000;
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(morgan('dev'));
 
+// API Routes
+// app.use('/api/users', require('./routes/api/users.js'))
+// app.use('/api/jobs', require('./routes/api/jobs.js'))
+
 // mongoose and mongo sandbox routes
 app.get("/create-user", (req, res) =>
 {
@@ -47,3 +51,16 @@ app.get("/create-user", (req, res) =>
         console.log(err);
     });
 });
+
+app.get("/all-users", (req, res) =>
+{
+    User.find()
+    .then((result) =>
+    {
+        res.send(result);
+    })
+    .catch((err) =>
+    {
+        console.log(err);
+    });
+})

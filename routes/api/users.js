@@ -24,12 +24,16 @@ router.get('/:id', (req, res) =>
 // Create user
 router.post('/', (req, res) =>
 {
+    if (req.body.is_broker != "broker" && req.body.is_broker != "loader")
+    {
+        return res.status(400).json({msg: `Error: client type must be "broker" or "loader"`});
+    }
     const newUser = 
     {
         id: uuid.v4(),
         name: req.body.name,
         email: req.body.email,
-        is_broker: req.body.is_broker
+        is_broker: req.body.is_broker == "broker"? true: false
     }
 
     if (!newUser.name || !newUser.email || !newUser.is_broker)
@@ -38,7 +42,7 @@ router.post('/', (req, res) =>
     }
     else
     {
-        members.push(newUser);
+        users.push(newUser);
         res.json(users); // FOR POSTMAN
         // res.redirect('/'); // FOR FORM (USING WEBPAGE)
     }

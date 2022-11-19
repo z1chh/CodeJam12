@@ -60,10 +60,23 @@ body{
 .login_input_username:focus{
     background-color: white;
 }
+.login_input_email:focus{
+    background-color: white;
+}
 .login_input_password:focus{
     background-color: white;
 }
 .login_input_username{
+    display: block;
+    height: 40px;
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+    border: 2.5px solid;
+    background-color: azure;
+    border-radius: 4px;
+}
+.login_input_email{
     display: block;
     height: 40px;
     width: 100%;

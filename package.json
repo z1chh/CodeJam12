@@ -5,8 +5,7 @@
   "main": "src/Load-In Road/src/index.js",
   "scripts": {
     "start": "node index",
-    "dev": "nodemon index",
-    "test": "nodemon app"
+    "dev": "nodemon indesrc/Load-In Road/src/indexx"
   },
   "dependencies": {
     "express": "^4.18.2",

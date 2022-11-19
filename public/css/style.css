@@ -24,19 +24,89 @@
 body{
     font-family: var(--merriweather);
     background-image: url(../images/truck.jpg);
-    background-size: cover;
+    background-attachment: fixed;
+    background-size: 100% 100%;
 }
 .login_container{
+    height:320px;
     width:300px;
-    height: 250px;
     padding:30px;
     position:fixed;
-    top:30%;
+    top:25%;
     left:40%;
-    border-radius: 20px;
+    border-radius: 25px;
+    border-style: solid;
+    border-width: 4px;
     text-align: center;
-    background: rgba(0, 0, 0, 0.5);
-    
+    background: rgb(0, 0, 0, 0.6)
 }
-
-
+.login_container_signup{
+    height:400px;
+    width:300px;
+    padding:30px;
+    position:fixed;
+    top:25%;
+    left:40%;
+    border-radius: 25px;
+    border-style: solid;
+    border-width: 4px;
+    text-align: center;
+    background: rgb(0, 0, 0, 0.6)
+}
+.login_title{
+    padding: 20px;
+    color:azure;
+}
+.login_input_username:focus{
+    background-color: white;
+}
+.login_input_password:focus{
+    background-color: white;
+}
+.login_input_username{
+    display: block;
+    height: 40px;
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+    border: 2.5px solid;
+    background-color: azure;
+    border-radius: 4px;
+}
+.login_input_password{
+    display: block;
+    height: 40px;
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+    border: 2.5px solid;
+    background-color: azure;
+    border-radius: 4px;
+}
+.login_submit{
+    width: 100%;
+    margin-top: 15px;
+    padding:0.75rem 2rem;
+    font-weight: bold;
+    background-color: azure;
+    border-radius: 4px;
+    color: 100,110,110;
+}
+.login_submit:hover{
+    background-color: rgb(200, 210, 210);
+}
+.login_err_msg{
+    /* color:red; */
+    font-size: 12px;
+}
+.login_hidden{
+    display:none;
+}
+.login_no_acct{
+    margin-top: 1px;
+    color: azure;
+    font-size: 10px;
+}
+.login_no_acct:hover{
+    text-decoration: underline;
+}

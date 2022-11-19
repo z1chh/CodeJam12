@@ -2,20 +2,20 @@
 const jobs = [
     {
         id: 1,
-        broker: 'Taurus Bartlett',
-        trucker: null,
+        shipper: 'Taurus Bartlett',
+        carrier: null,
         rate: 500
     },
     {
         id: 2,
-        broker: 'Taurus Bartlett',
-        trucker: 'Jarad Higgins',
+        shipper: 'Taurus Bartlett',
+        carrier: 'Jarad Higgins',
         rate: 1500
     },
     {
         id: 3,
-        name: 'Taurus Bartlett',
-        trucker: 'Charlton Howard',
+        shipper: 'Taurus Bartlett',
+        carrier: 'Charlton Howard',
         rate: 1200
     }
 ];

@@ -24,24 +24,27 @@ router.get('/:id', (req, res) =>
 // Create user
 router.post('/', (req, res) =>
 {
+    // Check if user type is valid
     const client_type = req.body.client_type;
     if (!client_type)
     {
         return res.status(400).json({msg: `Error: must include client type`});
     }
-    else if (client_type != "broker" && client_type != "loader")
+    else if (client_type != "carrier" && client_type != "shipper")
     {
-        return res.status(400).json({msg: `Error: client type must be 'broker' or 'loader'`});
+        return res.status(400).json({msg: `Error: client type must be 'carrier' or 'shipper'`});
     }
+
+    // Create user
     const newUser = 
     {
         id: uuid.v4(),
         name: req.body.name,
         email: req.body.email,
-        is_broker: req.body.client_type == "broker"? true: false
+        is_shipper: req.body.client_type == "shipper"? true: false
     }
 
-    if (!newUser.name || !newUser.email || !newUser.is_broker)
+    if (!newUser.name || !newUser.email)
     {
         return res.status(400).json({msg: `Error: must include name and email`});
     }

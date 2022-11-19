@@ -27,12 +27,6 @@ const jobSchema = new Schema(
     required: true,
     unique: false
     },
-    posted_date:
-    {
-    type: Date,
-    required: true,
-    unique: false
-    },
     expected_delivery_date:
     {
     type: Date,

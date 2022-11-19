@@ -107,4 +107,28 @@ app.post("/jobs", (req, res) =>
 {
     console.log(req.body);
     const job = new Job(req.body);
+    job.save()
+    .then((result) =>
+    {
+        res.redirect("/jobs");
+    })
+    .catch((err) =>
+    {
+        console.log(err);
+    });
+});
+
+app.get("/jobs/:id", (req, res) =>
+{
+    const id = req.params.id;
+    console.log(id);
+    Job.findById(id)
+    .then((result) =>
+    {
+        res.render("details", {job: result, title: "Job Details"})
+    })
+    .catch((err) =>
+    {
+        console.log(err);
+    });
 });

@@ -9,6 +9,9 @@ const Job = require("../../server/model/Job");
 // Initialize express
 const app = express();
 
+// Set default port
+const PORT = process.env.PORT || 5000 ;
+
 // Connect to MongoDB
 const dbUri = "mongodb+srv://admin:penguin@penguins.uqphgd2.mongodb.net/Penguins?retryWrites=true&w=majority";
 mongoose.connect(dbUri) //, {useNewUrlParse: true, useUnifiedTopology: true})
@@ -22,9 +25,6 @@ app.set('view engine', 'handlebars');
 // Body parser middleware
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
-
-// Set default port
-const PORT = process.env.PORT || 5000;
 
 // Set a static folder
 app.use(express.static(path.join(__dirname, 'public')));

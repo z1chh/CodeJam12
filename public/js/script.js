@@ -1,14 +1,14 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const loginPage = document.querySelector("#login_c");
-    const createPage = document.querySelector("#create_c");
+    const loginPage = document.querySelector("#login");
+    const createPage = document.querySelector("#create");
 
-    document.querySelector("#create_acct").addEventListener("click", e => {
+    document.querySelector("#createAcct").addEventListener("click", e => {
         e.preventDefault();
         loginPage.classList.add("login_hidden");
         createPage.classList.remove("login_hidden");
     });
 
-    document.querySelector("#login_acct").addEventListener("click", e => {
+    document.querySelector("#loginAcct").addEventListener("click", e => {
         e.preventDefault();
         loginPage.classList.remove("login_hidden");
         createPage.classList.add("login_hidden");

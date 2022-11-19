@@ -12,19 +12,19 @@
     <div class="login_container">
         <form class="login" action ="index.html" id="login">
             <h1 class="login_title">Welcome</h1>
-            <input type="username" class="login_input_username" placeholder="Username">
-            <input type="password" class="login_input_password" placeholder="Password"> 
+            <input type="username" class="login_input_username" placeholder="Username" id="loginUser">
+            <input type="password" class="login_input_password" placeholder="Password" id="loginPass"> 
             <div class="login_err_msg">Wrong username and/or password</div>
-            <button type="submit" class="login_submit">Login</button>
+            <button type="submit" class="login_submit" id="submitButton">Log In</button>
             <a class="login_no_acct" href="./" id="createAcct">Don't have an account? Create one here</a>  
         </form>  
         <form class="create login_hidden" action ="index.html" id="create">
             <h1 class="login_title">Create Account</h1>
-            <input type="username" class="login_input_username" placeholder="Enter Username">
+            <input type="username" class="login_input_username" placeholder="Enter Username" id="signupUser">
             <input type="password" class="login_input_password" placeholder="Enter Password"> 
-            <input type="password" class="login_input_password" placeholder="Confirm Password"> 
+            <input type="password" class="login_input_password" placeholder="Confirm Password" id="signupPass"> 
             <div class="login_err_msg">Wrong username and/or password</div>
-            <button type="submit" class="login_submit">Login</button>  
+            <button type="submit" class="login_submit" id="submitButton">Sign Up</button>  
             <a class="login_no_acct" href="./" id="loginAcct">Already have an account? Sign in here</a>
         </form>       
     </div>

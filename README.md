@@ -1,4 +1,6 @@
 # CodeJam12
+
+## Sketch
 - Premium : Users willing to share location (truckers) & rate (brokers)
 
 - Non-Premium : Basic 
@@ -8,7 +10,7 @@
 
 
 
-FRONT-END
+### FRONT-END
 - Signup/Login 
 - Broker or Trucker depending on login info
 
@@ -23,9 +25,11 @@ TRUCKER
 - Location -> Google maps live location -> update each time
 
 
-BACK-END
+### BACK-END
 - TABLES 	- USERS 	(name, email, passward, type (bool))
 		- TRUCKERS	(cargo max weight)
 		- BROKERS	()
 		- JOBS	(JOBS ID, Truckers ID, Brokers ID, Posted Date, Expected Date, Start Location, End Location, Rates, Cargo)
 
+## npm Installs
+- moment

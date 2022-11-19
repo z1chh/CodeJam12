@@ -43,3 +43,5 @@ TRUCKER
 Jobs is incomplete, make sure paths are correct, postman requests must be valid and correct
 
 No actual DBMS implementation, using arrays (meaning restarting code => reset - data lost)
+
+Tables are incomplete, simple implementation to test program for now, add missing details

@@ -1,33 +1,59 @@
-import mongoose from "mongoose";
+const mongoose = require("mongoose");
 const {Schema} = mongoose;
 
 const jobSchema = new Schema(
 {
-  name:
-  {
+    shipper:
+    {
+        type: mongoose.Schema.Types.ObjectId, ref: 'Shipper',
+        required: true,
+        unique: false
+    },
+    carrier:
+    {
+        type: mongoose.Schema.Types.ObjectId, ref: 'Carrier',
+        required: false,
+        unique: false
+    },
+    start_location:
+    {
+        type: String,
+        required: true,
+        unique: false
+    },
+    end_location:
+    {
     type: String,
     required: true,
     unique: false
-  },
-  email:
-  {
-    type: String,
-    required: true,
-    unique: true
-  },
-  password:
-  {
-    type: String,
+    },
+    posted_date:
+    {
+    type: Date,
     required: true,
     unique: false
-  },
-  is_broker:
-  {
-    type: Boolean,
+    },
+    expected_delivery_date:
+    {
+    type: Date,
+    required: false,
+    unique: false
+    },
+    rate:
+    {
+    type: Number,
     required: true,
     unique: false
-  },
-})
+    },
+    load_weight:
+    {
+    type: Number,
+    required: true,
+    unique: false
+    },
+},
+{timestamps: true}
+)
 const Job = mongoose.model('Job', jobSchema);
 
-export default Job;
+module.exports = Job;

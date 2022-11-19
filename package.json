@@ -1,7 +1,7 @@
 {
   "name": "codejam12_team_penguins",
   "version": "1.0.0",
-  "description": "",
+  "description": "- Premium : Users willing to share location (truckers) & rate (brokers)",
   "main": "index.js",
   "scripts": {
     "start": "node index",
@@ -13,10 +13,21 @@
     "moment": "^2.29.4",
     "mongodb": "^4.12.0",
     "mongoose": "^6.7.2",
+    "morgan": "^1.10.0",
     "path": "^0.12.7",
     "uuid": "^9.0.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.20"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/z1chh/CodeJam12.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/z1chh/CodeJam12/issues"
+  },
+  "homepage": "https://github.com/z1chh/CodeJam12#readme"
 }

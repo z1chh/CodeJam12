@@ -68,6 +68,9 @@ Note that the posted date is not a value that the shipper can enter, as the valu
 When selecting an ongoing job, a shipper has the option to track the live location of the carrier.
 By clicking on the tracking button, the shipper gets redirected to a new page that diplays an interactive map. The location of the carrier is then querried and updated every 0.5 second (half-second).
 
+<img align="center" src="src/Load-In_Road/assets/readme_imgs/location.JPG">
+<img align="center" src="src/Load-In_Road/assets/readme_imgs/location2.JPG">
+
 ## npm Installs
 - moment
 - express

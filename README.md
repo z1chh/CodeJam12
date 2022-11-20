@@ -29,6 +29,16 @@ The user communicates with the web application thanks to JavaScript and NodeJS. 
 There are two main schemas to represent the data: User and Job tables/collections.
 
 ### User Schema
+Attribute | Required | Unique
+--- | --- | ---
+Username | Yes | Yes
+--- | --- | ---
+Email | Yes | Yes
+--- | --- | ---
+Password | Yes | No
+--- | --- | ---
+Client Type | Yes | Yes
+
 - username (required, unique)
 - email (required, unique)
 - password (required, not unique)

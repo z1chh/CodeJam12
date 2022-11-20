@@ -1,5 +1,5 @@
-# CodeJam12 Team Penguins
-## Team Members
+# CodeJam XII
+## Team Penguins
 - Chen, Long Kun
 - Hu, Zi Chen
 - Kang, Adriel Alberto

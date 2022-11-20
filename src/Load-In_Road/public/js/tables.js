@@ -105,7 +105,7 @@ let USERS = [
     },
     {
         id: 4,
-        username: 'HandsomeLKC',
+        username: 'LKC',
         email: 'lk_c@hotmail.ca',
         is_shipper: true
     },
@@ -132,7 +132,7 @@ let USERS = [
 let JOBS = [
     {
         id: 1,
-        shipper: 'HandsomeLKC',
+        shipper: 'LKC',
         carrier: 'Jarad_Higgins',
         posted_day: '2022-10-31',
         expected_delivery_day: '2022-11-30',
@@ -143,7 +143,7 @@ let JOBS = [
     },
     {
         id: 2,
-        shipper: 'HandsomeLKC',
+        shipper: 'LKC',
         carrier: 'JimmePrice',
         posted_day: '2022-11-19',
         expected_delivery_day: '2022-12-24',
@@ -220,7 +220,7 @@ let JOBS = [
     },
     {
         id: 9,
-        shipper: 'HandsomeLKC',
+        shipper: 'LKC',
         carrier: 'Jarad_Higgins',
         posted_day: '2022-10-15',
         expected_delivery_day: '2022-11-21',

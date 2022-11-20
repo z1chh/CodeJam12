@@ -15,7 +15,7 @@
             border: 3px solid #3c5990;
             padding: 10px;
             width:700px;
-            height:400px;
+            height:420px;
             background: #92A8D1;
             border-radius: 6px;
             position: fixed;
@@ -24,7 +24,12 @@
             transform: translate(-50%,-50%);
             visibility: visible;
         }
-
+        .job{
+            margin-left:10px;
+        }
+        .popButton{
+            margin-top: px;
+        }
         .open-popup{
             visibility: hidden;
         }
@@ -47,9 +52,11 @@
         <h2>Job Lists</h2>
         <a href="../assets/geo/geo.html" target="_blank">Location</a>
         <br>
+        <ul class="job" id="shipper_jobs"></ul>
+        <br>
         <button type="button" onclick="closePopup()">EXIT</button>
     </div>
-    <script src=".\js\script1.js"></script>
+    <script src=".\js\tables2.js"></script>
     <script>
         let popup = document.getElementById("popup");
         function closePopup(){

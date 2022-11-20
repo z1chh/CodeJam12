@@ -30,11 +30,12 @@ There are two main schemas to represent the data: User and Job tables/collection
 
 ### User Schema
 
-Attribute | Required | Unique
-Username | Yes | Yes
-Email | Yes | Yes
-Password | Yes | No
-Client Type | Yes | Yes
+| Attribute | Required | Unique |
+| :-: | :-: | :-: |
+| Username | Yes | Yes |
+| Email | Yes | Yes |
+| Password | Yes | No |
+| Client Type | Yes | Yes |
 
 - Username: Used for display
 - Email: Used for login credentials
@@ -42,15 +43,16 @@ Client Type | Yes | Yes
 
 ### Job Schema
 
-Attribute | Required | Unique
-Shipper | Yes | No
-Carrier | No | No
-Posted Day | Yes | No
-Expected Delivery Date | No | No
-Pick-Up Point | Yes | No
-Drop-Off Point | Yes | No
-Rate | Yes | No
-Cargo Weight | Yes | No
+| Attribute | Required | Unique |
+| :-: | :-: | :-: |
+| Shipper | Yes | No |
+| Carrier | No | No |
+| Posted Day | Yes | No |
+| Expected Delivery Date | No | No |
+| Pick-Up Point | Yes | No |
+| Drop-Off Point | Yes | No |
+| Rate | Yes | No |
+| Cargo Weight | Yes | No |
 
 - Shipper: Set to the job poster by default
 - Carrier: Set to null to display an available job

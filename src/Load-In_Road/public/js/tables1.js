@@ -1,7 +1,3 @@
-// Tables cuz no actual DB :D
-
-
-
 const userExists = (email) =>
 {
     let exists = "-1";

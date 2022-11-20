@@ -104,7 +104,7 @@ let USERS = [
     },
     {
         id: 4,
-        username: 'HandsomeLKC',
+        username: 'LKC',
         email: 'lk_c@hotmail.ca',
         password: 'pass123',
         is_shipper: true
@@ -135,7 +135,7 @@ let USERS = [
 let JOBS = [
     {
         id: 1,
-        shipper: 'HandsomeLKC',
+        shipper: 'LKC',
         carrier: 'Jarad_Higgins',
         posted_day: '2022-10-31',
         expected_delivery_day: '2022-11-30',
@@ -146,7 +146,7 @@ let JOBS = [
     },
     {
         id: 2,
-        shipper: 'HandsomeLKC',
+        shipper: 'LKC',
         carrier: 'JimmePrice',
         posted_day: '2022-11-19',
         expected_delivery_day: '2022-12-24',
@@ -223,7 +223,7 @@ let JOBS = [
     },
     {
         id: 9,
-        shipper: 'HandsomeLKC',
+        shipper: 'LKC',
         carrier: 'Jarad_Higgins',
         posted_day: '2022-10-15',
         expected_delivery_day: '2022-11-21',
@@ -234,49 +234,52 @@ let JOBS = [
     }
 ];
 
-var userL = document.getElementById("loginUser").value;
-var passL = document.getElementById("loginPass").value;
-var user = document.getElementById("signupUser").value;
-var email = document.getElementById("signupEmail").value;
-var pass = document.getElementById("signupPass").value;
-var type; 
-if (document.getElementById('rdbRole1').checked){type = "C"}
-else{type = "B"}
-
-
-//Store to local storage
-var input_user = localStorage.setItem("user", user);
-var input_email = localStorage.setItem("email", email);
-var input_pass = localStorage.setItem("pass", pass);
-var input_type = localStorage.setItem("type", type);
-var input_userL = localStorage.setItem("userL", userL);
-var input_passL = localStorage.setItem("passL", passL);
-//put var up there to see
-//Store to local storage
-var input_user = localStorage.getItem("user", user);
-var input_email = localStorage.getItem("email", email);
-var input_pass = localStorage.getItem("pass", pass);
-var input_type = localStorage.getItem("type", type);
-var input_userL = localStorage.getItem("userL", userL);
-var input_passL = localStorage.getItem("passL", passL);
-
+// var userL = document.getElementById("loginUser").value;
+// var passL = document.getElementById("loginPass").value;
+// var user = document.getElementById("signupUser").value;
+// var email = document.getElementById("signupEmail").value;
+// var pass = document.getElementById("signupPass").value;
+// var type; 
+// if (document.getElementById('rdbRole1').checked){type = "C"}
+// else{type = "B"}
+// //Store to local storage
+// var input_user = localStorage.setItem("user", user);
+// var input_email = localStorage.setItem("email", email);
+// var input_pass = localStorage.setItem("pass", pass);
+// var input_type = localStorage.setItem("type", type);
+// var input_userL = localStorage.setItem("userL", userL);
+// var input_passL = localStorage.setItem("passL", passL);
+// //put var up there to see
+// //Store to local storage
+// var input_user = localStorage.getItem("user", user);
+// var input_email = localStorage.getItem("email", email);
+// var input_pass = localStorage.getItem("pass", pass);
+// var input_type = localStorage.getItem("type", type);
+// var input_userL = localStorage.getItem("userL", userL);
+// var input_passL = localStorage.getItem("passL", passL);
 
 let list_tk = document.getElementById("taken_jobs");
-console.log("3");
-let user1 = getUser(input_userL);
-console.log("4");
+console.log("0");
 JOBS.forEach((item)=>{
-    
-    // let li = document.createElement("li");
-    //     li.innerText =  "JobID:" + item.id + " , " + "Shipper:" + item.shipper + " , " + "Carrier:" + "None" + "\n" +
-    //                     "Posted Date:" + item.posted_day + " , " + "Expected Delivery Date:" + item.expected_delivery_day + "\n" + "Start Location:" + item.start_location + " , " +
-    //                     "End Location:" + item.end_location + "\n" + "Rate:" + item.rate + " , " + "Cargo:" + item.cargo;
-    //     list_tk.appendChild(li); 
-    if (item.carrier == user1.name){
+    if (item.carrier == 'Jarad_Higgins'){
         let li = document.createElement("li");
-        li.innerText =  "JobID:" + item.id + " , " + "Shipper:" + item.shipper + " , " + "Carrier:" + "None" + "\n" +
+        li.innerText =  "JobID:" + item.id + " , " + "Shipper:" + item.shipper + " , " + "Carrier:" + item.carrier + "\n" +
                         "Posted Date:" + item.posted_day + " , " + "Expected Delivery Date:" + item.expected_delivery_day + "\n" + "Start Location:" + item.start_location + " , " +
                         "End Location:" + item.end_location + "\n" + "Rate:" + item.rate + " , " + "Cargo:" + item.cargo;
         list_tk.appendChild(li); 
     }
 })
+
+// let list_tk = document.getElementById("taken_jobs");
+// console.log("3");
+// let user1 = getUser(input_userL);
+// console.log("4");
+// JOBS.forEach((item)=>{
+//     if (item.carrier == user1.name){
+//         let li = document.createElement("li");
+//         li.innerText =  "JobID:" + item.id + " , " + "Shipper:" + item.shipper + " , " + "Carrier:" + "None" + "\n" +
+//                         "Posted Date:" + item.posted_day + " , " + "Expected Delivery Date:" + item.expected_delivery_day + "\n" + "Start Location:" + item.start_location + " , " +
+//                         "End Location:" + item.end_location + "\n" + "Rate:" + item.rate + " , " + "Cargo:" + item.cargo;
+//         list_tk.appendChild(li); 
+//     }
+// })

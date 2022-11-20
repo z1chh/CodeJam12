@@ -2,7 +2,7 @@
 const jobs = [
     {
         id: 1,
-        shipper: 'HandsomeLKC',
+        shipper: 'LKC',
         carrier: 'Jarad_Higgins',
         posted_day: '2022-10-31',
         expected_delivery_day: '2022-11-30',
@@ -13,7 +13,7 @@ const jobs = [
     },
     {
         id: 2,
-        shipper: 'HandsomeLKC',
+        shipper: 'LKC',
         carrier: 'JimmePrice',
         posted_day: '2022-11-19',
         expected_delivery_day: '2022-12-24',
@@ -90,7 +90,7 @@ const jobs = [
     },
     {
         id: 9,
-        shipper: 'HandsomeLKC',
+        shipper: 'LKC',
         carrier: 'Jarad_Higgins',
         posted_day: '2022-10-15',
         expected_delivery_day: '2022-11-21',

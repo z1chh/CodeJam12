@@ -20,7 +20,7 @@ const users = [
     },
     {
         id: 4,
-        username: 'HandsomeLKC',
+        username: 'LKC',
         email: 'lk_c@hotmail.ca',
         is_shipper: true
     },

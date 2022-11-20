@@ -1,3 +1,4 @@
+// Tables cuz no actual DB :D
 const userExists = (email) =>
 {
     let exists = "-1";
@@ -85,49 +86,42 @@ let USERS = [
         id: 1,
         username: 'Jarad_Higgins',
         email: 'jah@gmail.com',
-        password: 'pass123',
         is_shipper: false
     },
     {
         id: 2,
         username: 'Charlton_Howard',
         email: 'laroi@gmail.com',
-        password: 'pass123',
         is_shipper: false
     },
     {
         id: 3,
         username: 'Taurus_Bartlett',
         email: 'polog@example.com',
-        password: 'pass123',
         is_shipper: true
     },
     {
         id: 4,
         username: 'LKC',
         email: 'lk_c@hotmail.ca',
-        password: 'pass123',
         is_shipper: true
     },
     {
         id: 5,
         username: 'Kalberto',
         email: 'spenguin@gmail.com',
-        password: 'pass123',
         is_shipper: true
     },
     {
         id: 6,
         username: 'JimmePrice',
         email: 'jimmyp@gmail.com',
-        password: 'pass123',
         is_shipper: false
     },
     {
         id: 7,
         username: 'Kadriel',
         email: 'sepenguin@gmail.com',
-        password: 'pass123',
         is_shipper: true
     }
 ];
@@ -236,15 +230,19 @@ let JOBS = [
 
 
 
-let list_av = document.getElementById("available_jobs");
+let list_sh = document.getElementById("shipper_jobs");
 console.log("0");
 JOBS.forEach((item)=>{
-    if (item.carrier == ''){
+    if (item.shipper == 'LKC'){
+        let a = document.createElement("a");
+        a.href="../assets/geo/geo.html";
+        a.target="_blank";
         let li = document.createElement("li");
         li.innerText =  "JobID:" + item.id + " , " + "Shipper:" + item.shipper + " , " + "Carrier:" + "None" + "\n" +
                         "Posted Date:" + item.posted_day + " , " + "Expected Delivery Date:" + item.expected_delivery_day + "\n" + "Start Location:" + item.start_location + " , " +
                         "End Location:" + item.end_location + "\n" + "Rate:" + item.rate + " , " + "Cargo:" + item.cargo;
-        list_av.appendChild(li); 
+        list_sh.appendChild(li); 
+        list_sh.appendChild(a);
     }
 })
 //put var up there to see
@@ -259,16 +257,16 @@ var input_userL = document.getElementById("loginUser").value;
 var input_passL = document.getElementById("loginPass").value;
 console.log("2");
 
-let list_tk = document.getElementById("taken_jobs");
-console.log("3");
-let user = getUser(input_userL);
-console.log("4");
-JOBS.forEach((item)=>{
-    if (item.carrier == user.name){
-        let li = document.createElement("li");
-        li.innerText =  "JobID:" + item.id + " , " + "Shipper:" + item.shipper + " , " + "Carrier:" + "None" + "\n" +
-                        "Posted Date:" + item.posted_day + " , " + "Expected Delivery Date:" + item.expected_delivery_day + "\n" + "Start Location:" + item.start_location + " , " +
-                        "End Location:" + item.end_location + "\n" + "Rate:" + item.rate + " , " + "Cargo:" + item.cargo;
-        list_tk.appendChild(li); 
-    }
-})
+// let list_tk = document.getElementById("taken_jobs");
+// console.log("3");
+// let user = getUser(input_userL);
+// console.log("4");
+// JOBS.forEach((item)=>{
+//     if (item.carrier == user.name){
+//         let li = document.createElement("li");
+//         li.innerText =  "JobID:" + item.id + " , " + "Shipper:" + item.shipper + " , " + "Carrier:" + "None" + "\n" +
+//                         "Posted Date:" + item.posted_day + " , " + "Expected Delivery Date:" + item.expected_delivery_day + "\n" + "Start Location:" + item.start_location + " , " +
+//                         "End Location:" + item.end_location + "\n" + "Rate:" + item.rate + " , " + "Cargo:" + item.cargo;
+//         list_tk.appendChild(li); 
+//     }
+// })

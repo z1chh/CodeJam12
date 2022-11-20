@@ -10,7 +10,7 @@ const Job = require("../../server/model/Job");
 const app = express();
 
 // Set default port
-const PORT = process.env.PORT || 5000 ;
+const PORT = process.env.PORT || 5000;
 
 // Connect to MongoDB
 const dbUri = "mongodb+srv://admin:penguin@penguins.uqphgd2.mongodb.net/Penguins?retryWrites=true&w=majority";
@@ -62,7 +62,7 @@ app.get("/create-user", (req, res) =>
     const user = new User(
         {
             name: "Adriel",
-            email: "kalberto2@gmail.com",
+            email: "kalberto@gmail.com",
             password: "spenguin",
             is_broker: true
         }

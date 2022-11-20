@@ -1,6 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const ejs = require("ejs");
+const bodyParser = require("body-parser");
 const User = require("../../server/model/User");
 
 // Initialize express
@@ -14,6 +15,14 @@ const dbUri = "mongodb+srv://admin:penguin@penguins.uqphgd2.mongodb.net/Penguins
 mongoose.connect(dbUri) //, {useNewUrlParse: true, useUnifiedTopology: true})
 .then((res) => app.listen(PORT, () => console.log(`Server started on ${PORT}.`)))
 .catch((err) => console.log(err));
+
+app.set("view engine", "ejs");
+app.use(bodyParser.urlencoded({extended: true}));
+
+app.get("/", (req, res) =>
+{
+    res.render("src/Load-In_Road/test/index");
+});
 
 app.post("/users", (req, res) =>
 {

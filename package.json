@@ -2,12 +2,14 @@
   "name": "codejam12_team_penguins",
   "version": "1.0.0",
   "description": "- Premium : Users willing to share location (truckers) & rate (brokers)",
-  "main": "src/Load-In Road/src/index.js",
+  "main": "src/Load-In_Road/src/index.js",
   "scripts": {
     "start": "node index",
-    "dev": "nodemon indesrc/Load-In Road/src/indexx"
+    "dev": "nodemon src/Load-In_Road/index",
+    "test": "nodemon src/Load-In_Road/test/index"
   },
   "dependencies": {
+    "body-parser": "^1.20.1",
     "ejs": "^3.1.8",
     "express": "^4.18.2",
     "express-handlebars": "^6.0.6",

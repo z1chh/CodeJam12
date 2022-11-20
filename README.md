@@ -42,6 +42,7 @@ TRUCKER
 - mongoDB
 - morgan
 - ejs
+- body-parser
 
 ## Notes
 Jobs is incomplete, make sure paths are correct, postman requests must be valid and correct

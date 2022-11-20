@@ -43,16 +43,19 @@
         </ul>
     </div>
     <div class="popup" id="popup">
-        <h2>Job Lists</h2>
-        <p>Get a Job!</p>
-        <button type="button" onclick="closePopup()">OK</button>
+        <h2>Your Taken Jobs List: </h2>
+        <br>
+        <ul class="job" id="taken_jobs"></ul>
+        <br>
+        <button type="button" onclick="closePopup()">EXIT</button>
     </div>
-    <script src=".\js\script1.js"></script>
+    <script src=".\js\tables.js"></script>
     <script>
         let popup = document.getElementById("popup");
         function closePopup(){
             popup.classList.add("open-popup")
         }
-    </script>
+    </script> 
+    <script src=".\js\script1.js"></script>
 </body>  
 </html>

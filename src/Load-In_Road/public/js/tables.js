@@ -1,5 +1,7 @@
 // Tables cuz no actual DB :D
 
+
+
 const userExists = (email) =>
 {
     let exists = "-1";
@@ -12,6 +14,8 @@ const userExists = (email) =>
     });
     return exists !== "-1";
 };
+
+
 
 const getUser = (email) =>
 {
@@ -80,7 +84,7 @@ const getJobs = (email) =>
 }
 
 // USERS
-const USERS = [
+let USERS = [
     {
         id: 1,
         username: 'Jarad_Higgins',
@@ -125,7 +129,7 @@ const USERS = [
     }
 ];
 
-const JOBS = [
+let JOBS = [
     {
         id: 1,
         shipper: 'HandsomeLKC',
@@ -226,3 +230,42 @@ const JOBS = [
         cargo: '15000'
     }
 ];
+
+
+
+let list_av = document.getElementById("available_jobs");
+console.log("0");
+JOBS.forEach((item)=>{
+    if (item.carrier == ''){
+        let li = document.createElement("li");
+        li.innerText =  "JobID:" + item.id + " , " + "Shipper:" + item.shipper + " , " + "Carrier:" + "None" + "\n" +
+                        "Posted Date:" + item.posted_day + " , " + "Expected Delivery Date:" + item.expected_delivery_day + "\n" + "Start Location:" + item.start_location + " , " +
+                        "End Location:" + item.end_location + "\n" + "Rate:" + item.rate + " , " + "Cargo:" + item.cargo;
+        list_av.appendChild(li); 
+    }
+})
+//put var up there to see
+console.log("1");
+var input_user = document.getElementById("signupUser").value;
+var input_email = document.getElementById("signupEmail").value;
+var input_pass = document.getElementById("signupPass").value;
+var type; 
+if (document.getElementById('rdbRole1').checked){type = "C"}
+else{type = "B"}
+var input_userL = document.getElementById("loginUser").value;
+var input_passL = document.getElementById("loginPass").value;
+console.log("2");
+
+let list_tk = document.getElementById("taken_jobs");
+console.log("3");
+let user = getUser(input_userL);
+console.log("4");
+JOBS.forEach((item)=>{
+    if (item.carrier == user.name){
+        let li = document.createElement("li");
+        li.innerText =  "JobID:" + item.id + " , " + "Shipper:" + item.shipper + " , " + "Carrier:" + "None" + "\n" +
+                        "Posted Date:" + item.posted_day + " , " + "Expected Delivery Date:" + item.expected_delivery_day + "\n" + "Start Location:" + item.start_location + " , " +
+                        "End Location:" + item.end_location + "\n" + "Rate:" + item.rate + " , " + "Cargo:" + item.cargo;
+        list_tk.appendChild(li); 
+    }
+})

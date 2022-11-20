@@ -14,19 +14,25 @@
             align-items: center;
             border: 3px solid #3c5990;
             padding: 10px;
-            width:700px;
-            height:400px;
+            width:800px;
+            height:600px;
             background: #92A8D1;
             border-radius: 6px;
             position: fixed;
             top: 50%;
-            left: 50%;
+            left: 60%;
             transform: translate(-50%,-50%);
             visibility: visible;
         }
 
         .open-popup{
             visibility: hidden;
+        }
+        .job{
+            margin-left:10px;
+        }
+        .popButton{
+            margin-top: px;
         }
     </style>
 
@@ -43,17 +49,19 @@
         </ul>
     </div>
     <div class="popup" id="popup">
-        <h2>Job Lists</h2>
-        <p>Get a Job!</p>
-        <button type="button" onclick="closePopup()">OK</button>
+        <h2>Available Jobs List: </h2>
+        <br>
+        <ul class="job" id="available_jobs"></ul>
+        <br>
+        <button type="button" class="popButton" onclick="closePopup()">EXIT</button>
     </div>
-    <script src=".\js\script1.js"></script>
+    <script src=".\js\tables.js"></script>
     <script>
         let popup = document.getElementById("popup");
         function closePopup(){
             popup.classList.add("open-popup")
         }
-    </script>
+    </script> 
     <script src=".\js\script1.js"></script>
 </body>  
 </html>

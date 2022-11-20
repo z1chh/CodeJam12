@@ -116,6 +116,12 @@ const USERS = [
         username: 'JimmePrice',
         email: 'jimmyp@gmail.com',
         is_shipper: false
+    },
+    {
+        id: 7,
+        username: 'Kadriel',
+        email: 'sepenguin@gmail.com',
+        is_shipper: true
     }
 ];
 
@@ -174,5 +180,49 @@ const JOBS = [
         end_location: '3121, Hochelaga Blvd, Quebec',
         rate: '8500',
         cargo: '55000'
+    },
+    {
+        id: 6,
+        shipper: 'Kadriel',
+        carrier: 'Charlton_Howard',
+        posted_day: '2022-11-19',
+        expected_delivery_day: '2022-11-19',
+        start_location: '5882, 2e Avenue, Montreal',
+        end_location: '5873, 4e Avenue, Montreal',
+        rate: '100',
+        cargo: '75'
+    },
+    {
+        id: 7,
+        shipper: 'Kadriel',
+        carrier: 'Charlton_Howard',
+        posted_day: '2022-11-20',
+        expected_delivery_day: '2022-11-20',
+        start_location: '5882, 2e Avenue, Montreal',
+        end_location: '5873, 4e Avenue, Montreal',
+        rate: '100',
+        cargo: '100'
+    },
+    {
+        id: 8,
+        shipper: 'Kadriel',
+        carrier: '',
+        posted_day: '2022-11-20',
+        expected_delivery_day: '2022-11-20',
+        start_location: '5882, 2e Avenue, Montreal',
+        end_location: '5873, 4e Avenue, Montreal',
+        rate: '100',
+        cargo: '200'
+    },
+    {
+        id: 9,
+        shipper: 'HandsomeLKC',
+        carrier: 'Jarad_Higgins',
+        posted_day: '2022-10-15',
+        expected_delivery_day: '2022-11-21',
+        start_location: '3200, Chemin de la Cote-Sainte-Catherine, Montreal',
+        end_location: '2685, King O Avenue, Sherbrooke',
+        rate: '8000',
+        cargo: '15000'
     }
 ];

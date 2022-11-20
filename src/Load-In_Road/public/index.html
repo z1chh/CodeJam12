@@ -30,23 +30,28 @@
             <input type="password" class="login_input_password" placeholder="Enter Password" name="password1"> 
             <input type="password" class="login_input_password" placeholder="Confirm Password" id="signupPass" name="password2"> 
             <!-- <p style="margin:10px; color:white">Sign Up as:</p> -->
-            <div style="padding:20px">
-            <input style="color:white" type="radio" name="rdbRole" id="rdbRole" value="C">
-            <label for="rdbRole">Carrier</label>
-            <input style="color:white" type="radio" name="rdbRole" id="rdbRole" value="B">
-            <label for="rdbRole">Broker</label>
+            <div style="padding:20px"></div>
+            <input style="color:white" type="radio" name="rdbRole" id="rdbRole1" value="y">
+            <label for="rdbRole1">Carrier</label>
+            <input style="color:white" type="radio" name="rdbRole" id="rdbRole2" value="n">
+            <label for="rdbRole2">Broker</label>
             <button type="submit" class="login_submit" id="submitButton">Sign Up</button>  
             <a class="login_no_acct" href="./" id="loginAcct">Already have an account? Sign in here</a>
         </form>       
     </div>
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
         function myfunc(event){
             var user = document.getElementById("signupUser").value;
             var email = document.getElementById("signupEmail").value;
             var pass = document.getElementById("signupPass").value;
-            var type = document.getElementById("rdbRole").value;
+            var type //= document.getElementById("rdbRole").value;
             var userL = document.getElementById("loginUser").value;
             var passL = document.getElementById("loginPass").value;
+            if (document.getElementById('rdbRole1').checked){
+                type = "C"
+            }else{
+                type = "B"
+            }
 
             localStorage.setItem('sUser',user);
             localStorage.setItem('sEmail',email);
@@ -54,8 +59,9 @@
             localStorage.setItem('sType',type);
             localStorage.setItem('lUser',userL);
             localStorage.setItem('lPass',passL);
+            
         }
-    </script>
+    </script> -->
     <script src=".\js\script.js"></script>
     
 </body>  

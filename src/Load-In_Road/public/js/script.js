@@ -1,12 +1,12 @@
 document.querySelector("#submitButton").addEventListener("click", e => {
     e.preventDefault();
-    // var type = document.getElementById("rdbRole");
-    // if (type=="C"){
+    var type = document.getElementById("rdbRole");
+    if (type=="C"){
         window.location.href = "carrier.html";
     }
-//     else if (type=="B"){
-//         window.location.href = "shipper.html";
-//     }
+     else if (type=="B"){
+         window.location.href = "shipper.html";
+     }
  );
 
 

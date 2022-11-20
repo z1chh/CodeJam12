@@ -1,15 +1,12 @@
 document.querySelector("#submitButton").addEventListener("click", e => {
     e.preventDefault();
-    // var username1 = document.getElementById("loginUser").value;
-    // var password1 = document.getElementById("loginPassword").value;
-    // if(username1=="admin" && password1=="user"){
-    //     alert("login success");
-    //     return false;
-    // }
-    // else{
-    //     alert("login fail");
-    // }
-    window.location.href = "shipper.html";
+    var type = document.getElementById("rdbRole");
+    if (type=="C"){
+        window.location.href = "carrier.html";
+    }
+    else if (type=="B"){
+        window.location.href = "shipper.html";
+    }
 });
 
 
@@ -31,3 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
+
+
+
+

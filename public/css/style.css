@@ -130,7 +130,10 @@ body{
     height:100%;
     width: 420px;
     background: rgba(255, 255, 255, 0.8);
+    transition: 1s;
 }
+
+
 .shipperHome header{
     font-size: 40px;
     font-weight: bold;
@@ -138,10 +141,10 @@ body{
     background-color: rgb(222, 222, 222);
     text-align: center;
     line-height: 150px;
-    border-bottom: 3px solid rgba(30, 30, 40, 0.45);
     border-right: 3px solid rgba(30, 30, 40, 0.45);
     /* border: 10px solid rgba(30, 30, 40, 0.5); */
 }
+
 .shipperHome ul a{
     display: flex;
     height: 100%;
@@ -151,14 +154,42 @@ body{
     background-color: rgba(255, 255, 255, 0.30);
     padding-left: 140px;
     text-align: left;
-    line-height: 138px;
-    border-bottom: 3px solid rgba(30, 30, 40, 0.45);
+    line-height: 135px;
+    border-top: 3px solid rgba(30, 30, 40, 0.45);
     border-right: 3px solid rgba(30, 30, 40, 0.45);
-    /* border-left: 5px solid rgba(30, 30, 40, 0.45);
-    border-right: 5px solid rgba(30, 30, 40, 0.45); */
     border-radius: 1px;
-    transition: 0.5s;
+    transition: 0.5s; 
 }
 ul li:hover a{
     background-color: rgba(255, 255, 255);
+}
+.shipperHome header .toggle{
+    height:40px;
+    width:40px;
+    position:absolute;
+    top:7.5%;
+    right:-17.5px;
+    font-size: 30px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    background-color: rgb(111, 111, 111);
+    border-radius: 20px;
+    color: white;
+    
+    transition: 1s;
+    cursor: pointer;
+    
+}
+.shipperHome .close .toggle{
+    /* transform: translateY(-50%) rotate(180deg);  */
+    width: 600px;
+}
+
+.shipperHome .close header .toggle{
+    width: 600px;
+}
+
+.shipperHome .close{
+    width:600px;
 }

@@ -12,6 +12,8 @@ document.querySelector("#submitButton").addEventListener("click", e => {
     window.location.href = "shipper.html";
 });
 
+
+
 document.addEventListener("DOMContentLoaded", () => {
     const loginPage = document.querySelector("#login");
     const createPage = document.querySelector("#create");
@@ -29,4 +31,3 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
-

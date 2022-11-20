@@ -5,7 +5,24 @@
 - Kang, Adriel Alberto
 
 ## Pain Points
-We decided to tackle two pain points, one for the carriers, and one for the shippers. We realized that both had a similar problem: the lack of information from the other party. In fact, carriers often want the shippers to display their rates so that it is easier for them to choose a job that pays better. On the other hand, shippers often want to have access to the carrier's location so that they can have instant updates on the location of the carrier, and whether the job is completed or not.
+We decided to tackle two pain points, one for the carriers, and one for the shippers.
+
+### Pain Point for Carrier
+#### Problem
+Carriers often look for the highest paying loads, regardless of the destination. However, brokers either don’t include the rates in their posting, or provide rates that too low for carriers to make a profit.
+
+#### Ideal Goal
+Increase the prices on load listings by encouraging brokers to increase posted rates, without discouraging them from posting their loads.
+
+### Pain Point for Shipper
+#### Problem
+Despite the presence of many location dependent features that would help carriers find good loads, carriers often do not enable their location services within the load board app due to privacy concerns. This means brokers do not know the location of their loads as they are being hauled and must rely on updates from the carriers.
+
+#### Ideal Goal
+Increase the number of users that enable their location services.
+
+### Why These Two Pain Points
+We realized that both had a similar problem: the lack of information from the other party. In fact, carriers often want the shippers to display their rates so that it is easier for them to choose a job that pays better. On the other hand, shippers often want to have access to the carrier's location so that they can have instant updates on the location of the carrier, and whether the job is completed or not.
 
 ## Our Solution
 We want to provide a web application that would be exclusive to shippers that display their prices when creating jobs, and for carriers that give access to their location when doing a job. Since the two parties provide that extra information to the other, we want them to have to privilege of also having more information for a job. This solution does not enforce the enabling of location for carriers, nor does it enforce the display of a price for shippers, but it gives an interesting benefit for those that decide to do it. Our idea is to motivate and cheer up people so that they can share more information to the other parties.

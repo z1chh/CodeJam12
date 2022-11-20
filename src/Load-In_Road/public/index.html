@@ -20,7 +20,7 @@
             <input type="username" class="login_input_username" placeholder="Username/Email" id="loginUser">
             <input type="password" class="login_input_password" placeholder="Password" id="loginPass"> 
             <div class="login_err_msg">Wrong username and/or password</div>
-            <button type="submit" class="login_submit" id="submitButton">Log In</button>
+            <button type="submit" onclick="getData()" class="login_submit" id="submitButton">Log In</button>
             <a class="login_no_acct" href="./" id="createAcct">Don't have an account? Create one here</a>  
         </form>  
         <form class="create login_hidden" action ="index.html" id="create">
@@ -35,12 +35,32 @@
             <label for="rdbRole1">Carrier</label>
             <input style="color:white" type="radio" name="rdbRole" id="rdbRole2" value="n">
             <label for="rdbRole2">Broker</label>
-            <button type="submit" class="login_submit" id="submitButton">Sign Up</button>  
+            <button type="submit" onclick="getData()" class="login_submit" id="submitButton">Sign Up</button>  
             <a class="login_no_acct" href="./" id="loginAcct">Already have an account? Sign in here</a>
         </form>       
     </div>
-    
+    <script>
+        function getData(){
+            var user = document.getElementById("signupUser").value;
+            var email = document.getElementById("signupEmail").value;
+            var pass = document.getElementById("signupPass").value;
+            var type; 
+            if (document.getElementById('rdbRole1').checked){type = "C"}
+            else{type = "B"}
+            var userL = document.getElementById("loginUser").value;
+            var passL = document.getElementById("loginPass").value;
+
+            //Store to local storage
+            var input_user = localStorage.setItem("user", user);
+            var input_email = localStorage.setItem("email", email);
+            var input_pass = localStorage.setItem("pass", pass);
+            var input_type = localStorage.setItem("type", type);
+            var input_userL = localStorage.setItem("userL", userL);
+            var input_passL = localStorage.setItem("passL", passL);
+            
+        }
+    </script>
     <script src=".\js\script.js"></script>
-    
+    <!-- <script src=".\js\tables1.js"></script> -->
 </body>  
 </html>

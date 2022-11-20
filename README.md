@@ -22,8 +22,8 @@ Then, shippers are redirected to their jobs page, where they can post new jobs, 
 
 Carriers are redirected to a browsing page, where they can view available jobs and select one to do. They can also go to their ongoing jobs to see which one they have already accepted (for instance, check when they should deliver tha load).
 
-<img align="left" width="400" src="src/Load-In_Road/assets/readme_imgs/login.JPG">
-<img align="left" width="400" src="src/Load-In_Road/assets/readme_imgs/signup.JPG">
+<img align="center" width="400" src="src/Load-In_Road/assets/readme_imgs/login.JPG">
+<img align="center" width="400" src="src/Load-In_Road/assets/readme_imgs/signup.JPG">
 
 ### Back-End
 The user communicates with the web application thanks to JavaScript and NodeJS. Express is used to interact with the user and handle the user requests. These requests are then passed to the service layer, which communicates to the Mongo Database using mongoose.

@@ -32,6 +32,10 @@ const getUser = (email) =>
 
 const createUser = (username, email, password, is_shipper) =>
 {
+    if (userExists(email))
+    {
+        return false;
+    }
     const newUser =
     {
         username: username,
@@ -41,6 +45,7 @@ const createUser = (username, email, password, is_shipper) =>
     };
 
     USERS.push(newUser);
+    return true;
 }
 
 const getJobs = (email) =>
@@ -48,15 +53,30 @@ const getJobs = (email) =>
     let user = getUser(email);
     if (user !== null)
     {
-        jobs = [];
+        let jobs = [];
         if (user.is_shipper)
         {
             JOBS.forEach((job) =>
             {
-                // TODO
-            })
+                if (job.shipper === user.username)
+                {
+                    jobs.push(job);
+                }
+            });
         }
+        else
+        {
+            JOBS.forEach((job) =>
+            {
+                if (job.carrier === user.username)
+                {
+                    jobs.push(job);
+                }
+            });
+        }
+        return jobs;
     }
+    return null;
 }
 
 // USERS

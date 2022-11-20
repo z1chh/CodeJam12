@@ -35,7 +35,7 @@ app.use(morgan('dev'));
 // app.use('/api/jobs', require('./routes/api/jobs.js'))
 app.get("/", (req, res) =>
 {
-    res.redirect("/jobs");
+    res.redirect("/public/index.html");
 });
 
 app.get("/jobs", (req, res) =>

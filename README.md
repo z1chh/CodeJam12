@@ -29,6 +29,7 @@ The user communicates with the web application thanks to JavaScript and NodeJS. 
 There are two main schemas to represent the data: User and Job tables/collections.
 
 ### User Schema
+
 Attribute | Required | Unique
 Username | Yes | Yes
 Email | Yes | Yes
@@ -40,6 +41,7 @@ Client Type | Yes | Yes
 - Client Type: Shipper or Carrier
 
 ### Job Schema
+
 Attribute | Required | Unique
 Shipper | Yes | No
 Carrier | No | No

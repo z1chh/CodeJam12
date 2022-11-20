@@ -30,29 +30,30 @@ There are two main schemas to represent the data: User and Job tables/collection
 
 ### User Schema
 Attribute | Required | Unique
---- | --- | ---
 Username | Yes | Yes
---- | --- | ---
 Email | Yes | Yes
---- | --- | ---
 Password | Yes | No
---- | --- | ---
 Client Type | Yes | Yes
 
-- username (required, unique)
-- email (required, unique)
-- password (required, not unique)
-- client type (shipper or carrier) (required, not unique)
+- Username: Used for display
+- Email: Used for login credentials
+- Client Type: Shipper or Carrier
 
 ### Job Schema
-- shipper (required, not unique)
-- carrier (not required, not unique)
-- posted day (required, not unique)
-- expected delivery date (not required, not unique)
-- start location (required, not unique)
-- end location (required, not unique)
-- rate (required, not unique)
-- cargo weight (not required, not unique)
+Attribute | Required | Unique
+Shipper | Yes | No
+Carrier | No | No
+Posted Day | Yes | No
+Expected Delivery Date | No | No
+Pick-Up Point | Yes | No
+Drop-Off Point | Yes | No
+Rate | Yes | No
+Cargo Weight | Yes | No
+
+- Shipper: Set to the job poster by default
+- Carrier: Set to null to display an available job
+- Posted Day: Initialized as timestamp
+- Cargo Weight: Required, as carriers have a maximum capacity
 
 Note that the posted date is not a value that the shipper can enter, as the value will be generated automatically my express and mongoose when creating the job posting (using `Date.now()` and `{timestamps: true}`).
 

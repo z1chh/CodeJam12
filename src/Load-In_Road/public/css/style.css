@@ -151,7 +151,7 @@ body{
     width: 100%;
     font-size: 20px;
     color:rgb(50, 50, 50);
-    background-color: rgba(255, 255, 255, 0.30);
+    /* background-color: rgba(255, 255, 255, 0.30); */
     padding-left: 140px;
     text-align: left;
     line-height: 135px;
@@ -181,15 +181,83 @@ ul li:hover a{
     cursor: pointer;
     
 }
-.shipperHome .close .toggle{
+.shipperHome.close .toggle{
     /* transform: translateY(-50%) rotate(180deg);  */
-    width: 600px;
+    
 }
 
-.shipperHome .close header .toggle{
-    width: 600px;
+.shipperHome.close header .toggle{
 }
 
 .shipperHome .close{
-    width:600px;
+    width:88px;
+}
+/***************************************************************************************************************/
+.carrierHome{
+    position: fixed;
+    left:0;
+    height:100%;
+    width: 420px;
+    background: rgba(255, 255, 255, 0.8);
+    transition: 1s;
+}
+
+
+.carrierHome header{
+    font-size: 40px;
+    font-weight: bold;
+    color:rgb(50, 50, 50);
+    background-color: rgb(222, 222, 222);
+    text-align: center;
+    line-height: 150px;
+    border-right: 3px solid rgba(30, 30, 40, 0.45);
+    /* border: 10px solid rgba(30, 30, 40, 0.5); */
+}
+
+.carrierHome ul a{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    font-size: 20px;
+    color:rgb(50, 50, 50);
+    /* background-color: rgba(255, 255, 255, 0.30); */
+    padding-left: 140px;
+    text-align: left;
+    line-height: 135px;
+    border-top: 3px solid rgba(30, 30, 40, 0.45);
+    border-right: 3px solid rgba(30, 30, 40, 0.45);
+    border-radius: 1px;
+    transition: 0.5s; 
+}
+ul li:hover a{
+    background-color: rgba(255, 255, 255);
+}
+.carrierHome header .toggle{
+    height:40px;
+    width:40px;
+    position:absolute;
+    top:7.5%;
+    right:-17.5px;
+    font-size: 30px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    background-color: rgb(111, 111, 111);
+    border-radius: 20px;
+    color: white;
+    
+    transition: 1s;
+    cursor: pointer;
+    
+}
+.carrierHome.close .toggle{
+    /* transform: translateY(-50%) rotate(180deg);  */
+    
+}
+
+.carrierHome.close header .toggle{
+}
+
+.carrierHome .close{
+    width:88px;
 }

@@ -8,6 +8,28 @@
     <link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet'>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>Home</title>
+    <style>
+        .popup{
+            margin: auto;
+            align-items: center;
+            border: 3px solid #3c5990;
+            padding: 10px;
+            width:700px;
+            height:400px;
+            background: #92A8D1;
+            border-radius: 6px;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            visibility: visible;
+        }
+
+        .open-popup{
+            visibility: hidden;
+        }
+    </style>
+
 </head>
 <body>
     <div class="shipperHome close" id="bod">
@@ -20,6 +42,18 @@
             <li><a style="text-decoration:none" href = "carrierET.html"><i class="editTaken"></i>Edit Taken Jobs</a></li>
         </ul>
     </div>
+    <div class="popup" id="popup">
+        <h2>Job Lists</h2>
+        <p>Get a Job!</p>
+        <button type="button" onclick="closePopup()">OK</button>
+    </div>
+    <script src=".\js\script1.js"></script>
+    <script>
+        let popup = document.getElementById("popup");
+        function closePopup(){
+            popup.classList.add("open-popup")
+        }
+    </script>
     <script src=".\js\script1.js"></script>
 </body>  
 </html>

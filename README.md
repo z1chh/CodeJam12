@@ -1,4 +1,8 @@
 # CodeJam12 Team Penguins
+## Team Members
+- Chen, Long Kun
+- Hu, Zi Chen
+- Kang, Adriel Alberto
 
 ## Pain Points
 We decided to tackle two pain points, one for the carriers, and one for the shippers. We realized that both had a similar problem: the lack of information from the other party. In fact, carriers often want the shippers to display their rates so that it is easier for them to choose a job that pays better. On the other hand, shippers often want to have access to the carrier's location so that they can have instant updates on the location of the carrier, and whether the job is completed or not.

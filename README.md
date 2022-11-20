@@ -31,7 +31,7 @@ There are two main schemas to represent the data: User and Job tables/collection
 ### User Schema
 
 | Attribute | Required | Unique |
-| :- | :-: | :-: |
+| :-: | :-: | :-: |
 | Username | Yes | Yes |
 | Email | Yes | Yes |
 | Password | Yes | No |
@@ -44,7 +44,7 @@ There are two main schemas to represent the data: User and Job tables/collection
 ### Job Schema
 
 | Attribute | Required | Unique |
-| :- | :-: | :-: |
+| :-: | :-: | :-: |
 | Shipper | Yes | No |
 | Carrier | No | No |
 | Posted Day | Yes | No |

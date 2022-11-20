@@ -11,7 +11,7 @@ const app = express();
 const PORT = process.env.PORT || 5000 ;
 
 // Connect to MongoDB
-const dbUri = "mongodb+srv://admin:penguin@penguins.uqphgd2.mongodb.net/Penguins?retryWrites=true&w=majority";
+const dbUri = "mongodb+srv://user1:user1@penguins.uqphgd2.mongodb.net/Penguins?retryWrites=true&w=majority";
 mongoose.connect(dbUri) //, {useNewUrlParse: true, useUnifiedTopology: true})
 .then((res) => app.listen(PORT, () => console.log(`Server started on ${PORT}.`)))
 .catch((err) => console.log(err));

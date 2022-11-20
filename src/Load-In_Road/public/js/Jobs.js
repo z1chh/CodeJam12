@@ -1,123 +1,8 @@
-const userExists = (email) =>
-{
-    let exists = "-1";
-    USERS.forEach((user) =>
-    {
-        if (user.email === email)
-        {
-            exists = email;
-        }
-    });
-    return exists !== "-1";
-};
-
-const getUser = (email) =>
-{
-    if (userExists(email))
-    {
-        let user = USERS[0];
-        USERS.forEach((cur) =>
-        {
-            if (cur.email === email)
-            {
-                user = cur;
-            }
-        })
-        return user;
-    }
-    return null;
-}
-
-document.querySelector("#submitButton").addEventListener("click", e => {
-    e.preventDefault();
-    
-    var input_email = document.getElementById("loginUser").value;
-    var user = getUser(input_email);
-    if (user.is_shipper){  
-        window.location.href = "shipper.html";
-    }
-    else{
-        window.location.href = "carrier.html";
-    }
-});
-
-
-
-document.addEventListener("DOMContentLoaded", () => {
-    const loginPage = document.querySelector("#login");
-    const createPage = document.querySelector("#create");
-
-    document.querySelector("#createAcct").addEventListener("click", e => {
-        e.preventDefault();
-        loginPage.classList.add("login_hidden");
-        createPage.classList.remove("login_hidden");
-    });
-
-    document.querySelector("#loginAcct").addEventListener("click", e => {
-        e.preventDefault();
-        loginPage.classList.remove("login_hidden");
-        createPage.classList.add("login_hidden");
-    });
-
-});
-
-// USERS
-/* let USERS = [
-    {
-        id: 1,
-        username: 'Jarad_Higgins',
-        email: 'jah@gmail.com',
-        password: 'pass123',
-        is_shipper: false
-    },
-    {
-        id: 2,
-        username: 'Charlton_Howard',
-        email: 'laroi@gmail.com',
-        password: 'pass123',
-        is_shipper: false
-    },
-    {
-        id: 3,
-        username: 'Taurus_Bartlett',
-        email: 'polog@example.com',
-        password: 'pass123',
-        is_shipper: true
-    },
-    {
-        id: 4,
-        username: 'LKC',
-        email: 'lk_c@hotmail.ca',
-        password: 'pass123',
-        is_shipper: true
-    },
-    {
-        id: 5,
-        username: 'Kalberto',
-        email: 'spenguin@gmail.com',
-        password: 'pass123',
-        is_shipper: true
-    },
-    {
-        id: 6,
-        username: 'JimmePrice',
-        email: 'jimmyp@gmail.com',
-        password: 'pass123',
-        is_shipper: false
-    },
-    {
-        id: 7,
-        username: 'Kadriel',
-        email: 'sepenguin@gmail.com',
-        password: 'pass123',
-        is_shipper: true
-    }
-]; */
-
+// JOBS
 let JOBS = [
     {
         id: 1,
-        shipper: 'LKC',
+        shipper: 'HandsomeLKC',
         carrier: 'Jarad_Higgins',
         posted_day: '2022-10-31',
         expected_delivery_day: '2022-11-30',
@@ -128,7 +13,7 @@ let JOBS = [
     },
     {
         id: 2,
-        shipper: 'LKC',
+        shipper: 'HandsomeLKC',
         carrier: 'JimmePrice',
         posted_day: '2022-11-19',
         expected_delivery_day: '2022-12-24',
@@ -205,7 +90,7 @@ let JOBS = [
     },
     {
         id: 9,
-        shipper: 'LKC',
+        shipper: 'HandsomeLKC',
         carrier: 'Jarad_Higgins',
         posted_day: '2022-10-15',
         expected_delivery_day: '2022-11-21',
@@ -216,3 +101,4 @@ let JOBS = [
     }
 ];
 
+export default JOBS;

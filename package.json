@@ -5,8 +5,8 @@
   "main": "src/Load-In_Road/src/index.js",
   "scripts": {
     "start": "node index",
-    "dev": "nodemon src/Load-In_Road/index",
-    "test": "nodemon src/Load-In_Road/test/index"
+    "dev": "nodemon index",
+    "test": "nodemon index"
   },
   "dependencies": {
     "body-parser": "^1.20.1",

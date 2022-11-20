@@ -1,16 +1,13 @@
-// Tables cuz no actual DB :D
-const members = require('../../Members');
-
 document.querySelector("#submitButton").addEventListener("click", e => {
     e.preventDefault();
-    var type = document.getElementById("rdbRole");
-    if (type=="C"){
+    // var type = document.getElementById("rdbRole");
+    // if (type=="C"){
         window.location.href = "carrier.html";
     }
-    else if (type=="B"){
-        window.location.href = "shipper.html";
-    }
-});
+//     else if (type=="B"){
+//         window.location.href = "shipper.html";
+//     }
+ );
 
 
 
@@ -34,4 +31,59 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
+// Tables cuz no actual DB :D
 
+// USERS
+const USERS = [
+    {
+        id: 1,
+        username: 'Jarad Higgins',
+        email: 'jah@gmail.com',
+        is_shipper: false
+    },
+    {
+        id: 2,
+        username: 'Charlton Howard',
+        email: 'laroi@gmail.com',
+        is_shipper: false
+    },
+    {
+        id: 3,
+        username: 'Taurus Bartlett',
+        email: 'polog@example.com',
+        is_shipper: true
+    },
+    {
+        id: 4,
+        username: 'HandsomeLKC',
+        email: 'lk_c@hotmail.ca',
+        is_shipper: true
+    }
+];
+
+const JOBS = [
+    {
+        id: 1,
+        username: 'Jarad Higgins',
+        email: 'jah@gmail.com',
+        is_shipper: false
+    },
+    {
+        id: 2,
+        username: 'Charlton Howard',
+        email: 'laroi@gmail.com',
+        is_shipper: false
+    },
+    {
+        id: 3,
+        username: 'Taurus Bartlett',
+        email: 'polog@example.com',
+        is_shipper: true
+    },
+    {
+        id: 4,
+        username: 'HandsomeLKC',
+        email: 'lk_c@hotmail.ca',
+        is_shipper: true
+    }
+];

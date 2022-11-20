@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // USERS
-/* let USERS = [
+let USERS = [
     {
         id: 1,
         username: 'Jarad_Higgins',
@@ -112,7 +112,7 @@ document.addEventListener("DOMContentLoaded", () => {
         password: 'pass123',
         is_shipper: true
     }
-]; */
+];
 
 let JOBS = [
     {

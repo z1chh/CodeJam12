@@ -22,8 +22,8 @@ Then, shippers are redirected to their jobs page, where they can post new jobs, 
 
 Carriers are redirected to a browsing page, where they can view available jobs and select one to do. They can also go to their ongoing jobs to see which one they have already accepted (for instance, check when they should deliver tha load).
 
-<img align="left" width="100" src="src/Load-In_Road/assets/readme_imgs/login.JPG">
-<img align="right" width="100" src="src/Load-In_Road/assets/readme_imgs/signup.JPG">
+<img align="left" width="800" src="src/Load-In_Road/assets/readme_imgs/login.JPG">
+<img align="right" width="800" src="src/Load-In_Road/assets/readme_imgs/signup.JPG">
 
 ![LogIn Page](https://github.com/z1chh/CodeJam12/blob/main/src/Load-In_Road/assets/readme_imgs/login.JPG)
 ![SignUp Page](https://github.com/z1chh/CodeJam12/blob/main/src/Load-In_Road/assets/readme_imgs/signup.JPG)

@@ -238,9 +238,10 @@ JOBS.forEach((item)=>{
         a.href="../assets/geo/geo.html";
         a.target="_blank";
         let li = document.createElement("li");
-        li.innerText =  "JobID:" + item.id + " , " + "Shipper:" + item.shipper + " , " + "Carrier:" + "None" + "\n" +
-                        "Posted Date:" + item.posted_day + " , " + "Expected Delivery Date:" + item.expected_delivery_day + "\n" + "Start Location:" + item.start_location + " , " +
-                        "End Location:" + item.end_location + "\n" + "Rate:" + item.rate + " , " + "Cargo:" + item.cargo;
+        li.innerText =  `JobID: ${item.id}, Shipper: ${item.shipper}, Carrier: None\n` +
+                        `Posted Date: ${item.posted_day}, Expected Delivery Date: ${item.expected_delivery_day}\n` +
+                        `Start Location: ${item.start_location}, End Location: ${item.end_location}\n` +
+                        `Rate: ${item.rate}$, Cargo: ${item.cargo}lbs`;
         list_sh.appendChild(li); 
         list_sh.appendChild(a);
     }
